@@ -13,6 +13,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
+      - name: Setup MSYS2
+        run: |
+          $env:PATH="C:\msys64\mingw64\bin;C:\msys64\usr\bin;"+$env:PATH
+          yes|pacman -Syu
+
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
@@ -27,7 +32,7 @@ jobs:
       - name: Build
         run: |
           $env:PATH="C:\msys64\mingw64\bin;C:\msys64\usr\bin;"+$env:PATH
-          yes|pacman -Syu
+          Get-Command g++
           Get-Command gcc
           python build.py --pack
           
