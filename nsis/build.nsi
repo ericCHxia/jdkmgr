@@ -68,7 +68,7 @@
   !insertmacro MUI_PAGE_COMPONENTS
   !insertmacro MUI_PAGE_DIRECTORY
   !insertmacro MUI_PAGE_INSTFILES
-  Page custom SetCustom ValidateCustom ": Testing InstallOptions" ;Custom page. InstallOptions gets called in SetCustom.
+  Page custom SetCustom ValidateCustom $(CONFIG_TITLE) ;Custom page for configuration
   !insertmacro MUI_PAGE_FINISH
   
   !insertmacro MUI_UNPAGE_WELCOME
@@ -100,15 +100,13 @@ Section "Main" SecMain
   SetOutPath "$INSTDIR"
   
   ;ADD YOUR OWN FILES HERE...
-  File /r "..\source"
+  File /r "..\dist\"
   ;Store installation folder
   WriteRegStr HKCU "Software\Java Development Kit Version Manager" "" $INSTDIR
   
   ;Create uninstaller
   WriteUninstaller "$INSTDIR\Uninstall.exe"
 
-  SetOutPath "$INSTDIR\bin"
-  File /r "..\dist\jdkmgr.dist\"
 
 SectionEnd
 
@@ -120,6 +118,7 @@ Function .onInit
   !insertmacro MUI_LANGDLL_DISPLAY
   InitPluginsDir
   File /oname=$PLUGINSDIR\option.ini "${OPTION_INI}"
+  WriteINIStr "$PLUGINSDIR\option.ini" "Field 1" "Text" $(JAVA_HOME_INFO)
 
 FunctionEnd
 
