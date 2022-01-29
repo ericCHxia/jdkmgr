@@ -155,3 +155,5 @@ cython_debug/
 cache/
 install/
 jdk/
+artifact/
+*.zip
