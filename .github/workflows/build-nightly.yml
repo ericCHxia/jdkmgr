@@ -26,7 +26,8 @@ jobs:
 
       - name: Build
         run: |
-          $env:PATH="C:\msys64\mingw64\bin;"+$env:PATH
+          $env:PATH="C:\msys64\mingw64\bin;C:\msys64\usr\bin;"+$env:PATH
+          yes|pacman -Syu
           Get-Command gcc
           python build.py --pack
           
