@@ -5,6 +5,10 @@
 ; !pragma warning error all
 !define TEMP1 $R0 ;Temp variable
 !define OPTION_INI "option.ini"
+!ifndef VERSION
+  !define VERSION "1.0.0"
+!endif
+
 
 ;--------------------------------
 ;Include Modern UI
@@ -19,7 +23,10 @@
 
   ;Name and file
   Name "Java Development Kit Version Manager"
+  BrandingText "Java Development Kit Version Manager v${VERSION}"
+
   OutFile "Stetup.exe"
+  VIProductVersion "${VERSION}"
 
   ;Default installation folder
   InstallDir "$LOCALAPPDATA\jdkmgr"
