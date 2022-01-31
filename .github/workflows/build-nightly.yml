@@ -19,7 +19,7 @@ jobs:
           unzip EnVar-Plugin.zip -d "C:\Program Files (x86)\NSIS"
       
       - name: Set up MinGW
-        uses: egor-tensin/setup-mingw@v2
+        uses: ericCHxia/setup-mingw@v3
       
       - name: Setup Python
         uses: actions/setup-python@v2
