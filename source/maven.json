@@ -1,0 +1,708 @@
+[
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-2.0.10-bin.tar.bz2",
+        "md5": "244b216dedd433d5277e72193dffc70e",
+        "sha1": "d70a18bc119f60954fcf514312fe048d70996c7e",
+        "version": "2.0.10"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-2.0.10-bin.tar.gz",
+        "md5": "1673c4b206633155774ecbcab1c2fb2e",
+        "sha1": "45dfe3c695ccdcc00deaa4f9d3ab13b140bad79c",
+        "version": "2.0.10"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-2.0.10-bin.zip",
+        "md5": "88e12fc17551cba04f3629333d38f848",
+        "sha1": "de145799a89a3855922bbbde229cef2833b4e752",
+        "version": "2.0.10"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-2.0.11-bin.tar.bz2",
+        "md5": "da561d12a310b27469f20a0a9cb63c8b",
+        "sha1": "a4f36630522f45566ea0220776de20d5ddff69ce",
+        "version": "2.0.11"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-2.0.11-bin.tar.gz",
+        "md5": "c87c4caae590d48f90e02fc7e254dabe",
+        "sha1": "9b308af922cd6e42f51d1c35f82506b39a3df6e1",
+        "version": "2.0.11"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-2.0.11-bin.zip",
+        "md5": "e28cb0ca795c796c30b1d140fd8f0309",
+        "sha1": "21c148be57ffd5639cc43b2fc98d19951861562d",
+        "version": "2.0.11"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-2.0.8-bin.tar.bz2",
+        "md5": "b049976be0daf0f4b55c0a7b24bec7b7",
+        "sha1": "21c148be57ffd5639cc43b2fc98d19951861562d",
+        "version": "2.0.8"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-2.0.8-bin.tar.gz",
+        "md5": "b0fa94ac92189a227ab169a84f3b4d14",
+        "sha1": "21c148be57ffd5639cc43b2fc98d19951861562d",
+        "version": "2.0.8"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-2.0.8-bin.zip",
+        "md5": "39dc2fe882e6980cd2d4f3b4e7dba57a",
+        "sha1": "21c148be57ffd5639cc43b2fc98d19951861562d",
+        "version": "2.0.8"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-2.0.9-bin.tar.bz2",
+        "md5": "77435fd52cc6bd8d4aee9a9242bae1df",
+        "sha1": "1890a33aac8f23c2a97f4858a1eb0edc13b898e9",
+        "version": "2.0.9"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-2.0.9-bin.tar.gz",
+        "md5": "6d842f7cb9696676982096c72d063133",
+        "sha1": "62a895216957136cb36b42b063c0fac283ce7c66",
+        "version": "2.0.9"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-2.0.9-bin.zip",
+        "md5": "5e92d1c5b0a6580127059e28fe2f2b45",
+        "sha1": "7bba7e0c04b38e41ad6cb4522d8bca9f7e5365b9",
+        "version": "2.0.9"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-2.1.0-M1-bin.tar.bz2",
+        "md5": "3f3d66be264dc9dbe848034aae0310fd",
+        "sha1": "153e2b5733d1c0bc5f512a057a651547110763ae",
+        "version": "2.1.0-M1"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-2.1.0-M1-bin.tar.gz",
+        "md5": "f13de6aa7a66a6a626d19bf75f10880a",
+        "sha1": "10e14c23e813112d7e5d85204a44a05ee0cbedb9",
+        "version": "2.1.0-M1"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-2.1.0-M1-bin.zip",
+        "md5": "36d61ff35421fb904fa25c13c6cf51f6",
+        "sha1": "4d9641109c1c650546c39d8440b8c6d6285b1085",
+        "version": "2.1.0-M1"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-2.1.0-bin.tar.bz2",
+        "md5": "9268c9de2cccfd0d8fbcdbcfaf517a87",
+        "sha1": "7b18c2968b3c4e0c32aceb3203b776572c161fd3",
+        "version": "2.1.0"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-2.1.0-bin.tar.gz",
+        "md5": "ad4303ed761ca4a607d71725f734962b",
+        "sha1": "5d747611234c0f346966b366926d8f5d550ede21",
+        "version": "2.1.0"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-2.1.0-bin.zip",
+        "md5": "0e4301cc9acce6b337cf7137b673cf3d",
+        "sha1": "ea87af7bd3ba0717564e965c76161ac50471928c",
+        "version": "2.1.0"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-2.2.0-bin.tar.bz2",
+        "md5": "3cfb024af32c61410531c54b8364a8c4",
+        "sha1": "c301aefcd7dd9a6fb605937e1e049ed485f75188",
+        "version": "2.2.0"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-2.2.0-bin.tar.gz",
+        "md5": "a322cfdd190c1dbebc5c1d7f74b7cd4d",
+        "sha1": "bc90f34fbe3a20b541c40e7a612fc7f41eba65a9",
+        "version": "2.2.0"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-2.2.0-bin.zip",
+        "md5": "132bcde2aeca20acb0b16c1c66b74984",
+        "sha1": "b55b746429b7f9d484868e8fe75fc23d0e67b639",
+        "version": "2.2.0"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-2.2.1-bin.tar.bz2",
+        "md5": "c581a15cb0001d9b771ad6df7c8156f8",
+        "sha1": "47ac0417a200cbc6d1b967d6b7c6ae1138e9e3e0",
+        "version": "2.2.1"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-2.2.1-bin.tar.gz",
+        "md5": "3f829ed854cbacdaca8f809e4954c916",
+        "sha1": "3ac63025e5860c4d856e172ab556d14b52f9b1f1",
+        "version": "2.2.1"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-2.2.1-bin.zip",
+        "md5": "83fc9b8e7fbcd89fccfdee0e50c54bab",
+        "sha1": "eaaa6bea24314246a93a83c830da072bcca87a80",
+        "version": "2.2.1"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0-alpha-2-bin.tar.bz2",
+        "md5": "32ec8bd61f809f82c12830ca104129b5",
+        "sha1": "27217b81d504218d5639d85de9cd4a2f878e0e40",
+        "version": "3.0-alpha-2"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0-alpha-2-bin.tar.gz",
+        "md5": "30eb08df723e3b84199cc36cfc009a1a",
+        "sha1": "cbeadcf8a6f88b22d72ba476de195558254c62f8",
+        "version": "3.0-alpha-2"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0-alpha-2-bin.zip",
+        "md5": "bd1ad57e6907e0d2836cb89d7719e25d",
+        "sha1": "f65510ac123bc30e6551ca65ac90530820533e63",
+        "version": "3.0-alpha-2"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0-alpha-3-bin.tar.gz",
+        "md5": "26e4d8f9e9d724ac822175158041cbd3",
+        "sha1": "673058eba54f221fba50e38e25491f43ac039c7c",
+        "version": "3.0-alpha-3"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0-alpha-3-bin.zip",
+        "md5": "1c7afa91daf999c87bab6bf694078115",
+        "sha1": "8c60a16586bb8dd56d413333735af88217b00e6f",
+        "version": "3.0-alpha-3"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0-alpha-4-bin.tar.gz",
+        "md5": "10162708dca181cdc370977099d63d23",
+        "sha1": "d568e24caa54838b5e7c1c3c63f710cdd95cab9c",
+        "version": "3.0-alpha-4"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0-alpha-4-bin.zip",
+        "md5": "66507913c82e1e24e9bb26678514e017",
+        "sha1": "671ffce0da2ca34f6395f403c46e78bec23e6526",
+        "version": "3.0-alpha-4"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0-alpha-5-bin.tar.gz",
+        "md5": "c0a6e4f813418a8c5baaea3d49b00a3f",
+        "sha1": "c9c83566a7afcef9ecaeb00d18d8fe0a6df81932",
+        "version": "3.0-alpha-5"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0-alpha-5-bin.zip",
+        "md5": "a128c5dd982c1d7f95f454a3e6c34332",
+        "sha1": "80bb7bfe5524757ee14bdde62c05185150e7fa79",
+        "version": "3.0-alpha-5"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0-alpha-6-bin.tar.gz",
+        "md5": "7a1083aa6c07b8637d965d3e3a49d2f4",
+        "sha1": "8778a2788e216e3c0508398471e9205466d4bfad",
+        "version": "3.0-alpha-6"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0-alpha-6-bin.zip",
+        "md5": "e81e59bc8853e229a760c0be479b7727",
+        "sha1": "7eab7892b098ee46c4a54690b86595c93310f7e5",
+        "version": "3.0-alpha-6"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0-alpha-7-bin.tar.gz",
+        "md5": "29e7d61786c74eaa5315759e88566a48",
+        "sha1": "25fa8d7909fac90f5835d6613d565e2a0f8e709b",
+        "version": "3.0-alpha-7"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0-alpha-7-bin.zip",
+        "md5": "6f84d99f69d9f08e51a9daccf8571022",
+        "sha1": "107542526ecb9d482e90f0a7a0d0bb36b5fedf92",
+        "version": "3.0-alpha-7"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0-beta-1-bin.tar.gz",
+        "md5": "82d43745cf2f2d1d939f1139a09d6654",
+        "sha1": "639ada216287e1f2689e5e142f1e21aa7560d3d2",
+        "version": "3.0-beta-1"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0-beta-1-bin.zip",
+        "md5": "df70a19db5517de95617f9ccd5694231",
+        "sha1": "a185fb2d4e78ecb5fff132bce9ffb0da508f2fec",
+        "version": "3.0-beta-1"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0-beta-2-bin.tar.gz",
+        "md5": "a40881f56a3087828545f30921ff393f",
+        "sha1": "0b39a8586b8979808e582faf332abf71456e9ad1",
+        "version": "3.0-beta-2"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0-beta-2-bin.zip",
+        "md5": "61129f46738bd12b486454ad379063ee",
+        "sha1": "0f885579702c3f02597bb0a12bf3579b22d81ac2",
+        "version": "3.0-beta-2"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0-beta-3-bin.tar.gz",
+        "md5": "b11cf59c8a4cd36741243267c58cf6a0",
+        "sha1": "dc1468a57e6313b0ca355bc628df87e6f50ebc69",
+        "version": "3.0-beta-3"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0-beta-3-bin.zip",
+        "md5": "9ef46f36eec54c9cfc79900c10046fb4",
+        "sha1": "135ac98e9fb7c3c5bd096bfb7d61cdb39d947e46",
+        "version": "3.0-beta-3"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0-bin.tar.gz",
+        "md5": "505560ca377b990a965c4e4f8da42daa",
+        "sha1": "996f29b5a19e8145cb00926c68a0200dac554205",
+        "version": "3.0"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0-bin.zip",
+        "md5": "c483e0d3c0200c8e1910dfde2f8a71d7",
+        "sha1": "0e0f9f04d32cc56f56546923298a00643851af08",
+        "version": "3.0"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0.1-bin.tar.gz",
+        "md5": "98379efcef6b07bc44c27ec8382ad366",
+        "sha1": "a5f0458327acc89f46643b3b5626784bfdfba7e8",
+        "version": "3.0.1"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0.1-bin.zip",
+        "md5": "7b733d03b78924c226d5b917f1cba18f",
+        "sha1": "4aaa427cd684ed462a0a0566d89814e15d23278e",
+        "version": "3.0.1"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0.2-bin.tar.gz",
+        "md5": "01496e49c1fae860cdf573c6316f85c4",
+        "sha1": "eedd18952c373824c32b2fa891569bdf3776f650",
+        "version": "3.0.2"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0.2-bin.zip",
+        "md5": "6804ebb7b6eee9c0cd004adde985c9fb",
+        "sha1": "4f9c9e8d39630b3b285c72c8a88820a220898b7d",
+        "version": "3.0.2"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0.3-bin.tar.gz",
+        "md5": "507828d328eb3735103c0492443ef0f0",
+        "sha1": "cfd1f5ef8ebb2f09a9446159842cf7cfa1a3ccd6",
+        "version": "3.0.3"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0.3-bin.zip",
+        "md5": "e9d7eb43b0cdb504f513e0c32ed0e71a",
+        "sha1": "a511890049a6a9b8d675f4417721337580cbd2f9",
+        "version": "3.0.3"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0.4-bin.tar.gz",
+        "md5": "e513740978238cb9e4d482103751f6b7",
+        "sha1": "0de5dc162bafde3fcb0a6b009cfeea81a042523b",
+        "version": "3.0.4"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0.4-bin.zip",
+        "md5": "2a8974fd1546ef5f11ad9cccb3cabf88",
+        "sha1": "29cfd351206016b67dd0d556098513d2b259c69b",
+        "version": "3.0.4"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0.5-bin.tar.gz",
+        "md5": "94c51f0dd139b4b8549204d0605a5859",
+        "sha1": "aecc0d3d67732939c0056d4a0d8510483ee1167e",
+        "version": "3.0.5"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.0.5-bin.zip",
+        "md5": "20b830ab3aa3fec221e85f9dd1fcbedd",
+        "sha1": "694f57282d92c434800f79218e64704e5947008a",
+        "version": "3.0.5"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.1.0-alpha-1-bin.tar.gz",
+        "md5": "1c7df119066905640f16774d2146faae",
+        "sha1": "f7864a780335bf3c3a609929ef15e574d1411f68",
+        "version": "3.1.0-alpha-1"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.1.0-alpha-1-bin.zip",
+        "md5": "2eef32807eca96e584eb142b0d52cbc9",
+        "sha1": "aef4f99bf1a18f0a5ade4af74e49020263db4e3b",
+        "version": "3.1.0-alpha-1"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.1.0-bin.tar.gz",
+        "md5": "e251cf1a584b4a5f13ae118abaacd08a",
+        "sha1": "af0867027f0907631c1f85ecf668f74c08f5d5e9",
+        "version": "3.1.0"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.1.0-bin.zip",
+        "md5": "413043aa3ed0142412a98de9838c80fb",
+        "sha1": "5aec23e2c32238e85da536f2f4ec49449a215339",
+        "version": "3.1.0"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.1.1-bin.tar.gz",
+        "md5": "6342fdf6b0aabc1457c7f8cc218127ed",
+        "sha1": "630eea2107b0742acb315b214009ba08602dda5f",
+        "version": "3.1.1"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.1.1-bin.zip",
+        "md5": "d93229786e21aac777014f9ed4ad39f8",
+        "sha1": "8416a8f07f9bd36bbc775eaddda0693a35937fe9",
+        "version": "3.1.1"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.2.1-bin.tar.gz",
+        "md5": "aaef971206104e04e21a3b580d9634fe",
+        "sha1": "40e1bf0775fd3ebcac1dbeb61153b871b86b894f",
+        "version": "3.2.1"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.2.1-bin.zip",
+        "md5": "5d86506f17e5ff0b0c83c648f4093abb",
+        "sha1": "5487a083ac34316e2ff69de84cb1b28d0e0ffdfa",
+        "version": "3.2.1"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.2.2-bin.tar.gz",
+        "md5": "87e5cc81bc4ab9b83986b3e77e6b3095",
+        "sha1": "edc1653038137314f0140b0e62d0e3169432882f",
+        "version": "3.2.2"
+    },
+    {
+        "url": "http://archive.apache.org/dist/maven/binaries/apache-maven-3.2.2-bin.zip",
+        "md5": "49c3d724dee3608982ad74341d9ba852",
+        "sha1": "c9b8360139577978586e784acd00bfb02beef07a",
+        "version": "3.2.2"
+    },
+    {
+        "version": "3.0.4",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.0.4/binaries/apache-maven-3.0.4-bin.tar.gz",
+        "md5": "e513740978238cb9e4d482103751f6b7",
+        "sha1": "0de5dc162bafde3fcb0a6b009cfeea81a042523b"
+    },
+    {
+        "version": "3.0.4",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.0.4/binaries/apache-maven-3.0.4-bin.zip",
+        "md5": "2a8974fd1546ef5f11ad9cccb3cabf88",
+        "sha1": "29cfd351206016b67dd0d556098513d2b259c69b"
+    },
+    {
+        "version": "3.0.5",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.0.5/binaries/apache-maven-3.0.5-bin.tar.gz",
+        "md5": "94c51f0dd139b4b8549204d0605a5859",
+        "sha1": "aecc0d3d67732939c0056d4a0d8510483ee1167e"
+    },
+    {
+        "version": "3.0.5",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.0.5/binaries/apache-maven-3.0.5-bin.zip",
+        "md5": "20b830ab3aa3fec221e85f9dd1fcbedd",
+        "sha1": "694f57282d92c434800f79218e64704e5947008a"
+    },
+    {
+        "version": "3.1.0-alpha-1",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.1.0-alpha-1/binaries/apache-maven-3.1.0-alpha-1-bin.tar.gz",
+        "md5": "1c7df119066905640f16774d2146faae",
+        "sha1": "f7864a780335bf3c3a609929ef15e574d1411f68"
+    },
+    {
+        "version": "3.1.0-alpha-1",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.1.0-alpha-1/binaries/apache-maven-3.1.0-alpha-1-bin.zip",
+        "md5": "2eef32807eca96e584eb142b0d52cbc9",
+        "sha1": "aef4f99bf1a18f0a5ade4af74e49020263db4e3b"
+    },
+    {
+        "version": "3.1.0",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.1.0/binaries/apache-maven-3.1.0-bin.tar.gz",
+        "md5": "e251cf1a584b4a5f13ae118abaacd08a",
+        "sha1": "af0867027f0907631c1f85ecf668f74c08f5d5e9"
+    },
+    {
+        "version": "3.1.0",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.1.0/binaries/apache-maven-3.1.0-bin.zip",
+        "md5": "413043aa3ed0142412a98de9838c80fb",
+        "sha1": "5aec23e2c32238e85da536f2f4ec49449a215339"
+    },
+    {
+        "version": "3.1.1",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.1.1/binaries/apache-maven-3.1.1-bin.tar.gz",
+        "md5": "6342fdf6b0aabc1457c7f8cc218127ed",
+        "sha1": "630eea2107b0742acb315b214009ba08602dda5f"
+    },
+    {
+        "version": "3.1.1",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.1.1/binaries/apache-maven-3.1.1-bin.zip",
+        "md5": "d93229786e21aac777014f9ed4ad39f8",
+        "sha1": "8416a8f07f9bd36bbc775eaddda0693a35937fe9"
+    },
+    {
+        "version": "3.2.1",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.2.1/binaries/apache-maven-3.2.1-bin.tar.gz",
+        "md5": "aaef971206104e04e21a3b580d9634fe",
+        "sha1": "40e1bf0775fd3ebcac1dbeb61153b871b86b894f"
+    },
+    {
+        "version": "3.2.1",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.2.1/binaries/apache-maven-3.2.1-bin.zip",
+        "md5": "5d86506f17e5ff0b0c83c648f4093abb",
+        "sha1": "5487a083ac34316e2ff69de84cb1b28d0e0ffdfa"
+    },
+    {
+        "version": "3.2.2",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.2.2/binaries/apache-maven-3.2.2-bin.tar.gz",
+        "md5": "87e5cc81bc4ab9b83986b3e77e6b3095",
+        "sha1": "edc1653038137314f0140b0e62d0e3169432882f"
+    },
+    {
+        "version": "3.2.2",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.2.2/binaries/apache-maven-3.2.2-bin.zip",
+        "md5": "49c3d724dee3608982ad74341d9ba852",
+        "sha1": "c9b8360139577978586e784acd00bfb02beef07a"
+    },
+    {
+        "version": "3.2.3",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.2.3/binaries/apache-maven-3.2.3-bin.tar.gz",
+        "md5": "2fcfdb327eb94b8595d97ee4181ef0a6",
+        "sha1": "1ce6641f7dcb4fd5785bedcdca2979da83f6d23f"
+    },
+    {
+        "version": "3.2.3",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.2.3/binaries/apache-maven-3.2.3-bin.zip",
+        "md5": "463d02b4a31ab2862c295e67e46dee1e",
+        "sha1": "90820a88806beee1a2659c9e10eec6adfa33d818"
+    },
+    {
+        "version": "3.2.5",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.tar.gz",
+        "md5": "b2d88f02bd3a08a9df1f0b0126ebd8dc",
+        "sha1": "41009327d5494e0e8970b25b77ffed8934cd7ca1"
+    },
+    {
+        "version": "3.2.5",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.zip",
+        "md5": "e617600b75dff1f69b67e92d55f47c6a",
+        "sha1": "eb6779dc81b098b81a1e7c597473450683bd86f6"
+    },
+    {
+        "version": "3.3.1",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.3.1/binaries/apache-maven-3.3.1-bin.tar.gz",
+        "md5": "8aff6a1d1902c84bf2b4be6916e60146",
+        "sha1": "a98e56056d17b415a3b13d113199bf5f8121489b"
+    },
+    {
+        "version": "3.3.1",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.3.1/binaries/apache-maven-3.3.1-bin.zip",
+        "md5": "067d9f8ecd6ff3981e2764e50846da5f",
+        "sha1": "be5f1924450f943082d12378c5a9f1116e959516"
+    },
+    {
+        "version": "3.3.3",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.3.3/binaries/apache-maven-3.3.3-bin.tar.gz",
+        "md5": "794b3b7961200c542a7292682d21ba36",
+        "sha1": "c8f257dce3381d9d8c420168a6df0fa25664337c"
+    },
+    {
+        "version": "3.3.3",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.3.3/binaries/apache-maven-3.3.3-bin.zip",
+        "md5": "6e5da03a3324f616493a0fd09d6383fc",
+        "sha1": "b8eebb7ba265532bf55aa17f89440c2fe267bed3"
+    },
+    {
+        "version": "3.3.9",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz",
+        "md5": "516923b3955b6035ba6b0a5b031fbd8b",
+        "sha1": "5b4c117854921b527ab6190615f9435da730ba05"
+    },
+    {
+        "version": "3.3.9",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.zip",
+        "md5": "e7ebd0b8d6811b42a5dad91fb27fe9b4",
+        "sha1": "2ddf9bb8c3b41bc2891832a6d6fc25f8bf41d77f"
+    },
+    {
+        "version": "3.5.0-alpha-1",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.5.0-alpha-1/binaries/apache-maven-3.5.0-alpha-1-bin.tar.gz",
+        "md5": "179c14202e17e7e8be5e706468370d81",
+        "sha1": "a677b8398313325d6c266279cb8d385bbc9d435d"
+    },
+    {
+        "version": "3.5.0-alpha-1",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.5.0-alpha-1/binaries/apache-maven-3.5.0-alpha-1-bin.zip",
+        "md5": "9eeb9a81bd7a4cf2a0071a05cefe470b",
+        "sha1": "b342491934cb57ee43d511002ded9ab7e597f758"
+    },
+    {
+        "version": "3.5.0-beta-1",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.5.0-beta-1/binaries/apache-maven-3.5.0-beta-1-bin.tar.gz",
+        "md5": "31b825624e6655c486b82cc00aebbb5b",
+        "sha1": "742788c3e7325ffd1f333fd6c9d4c8c640d0f10a"
+    },
+    {
+        "version": "3.5.0-beta-1",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.5.0-beta-1/binaries/apache-maven-3.5.0-beta-1-bin.zip",
+        "md5": "b66b87d49109d0cabbae0efd81cb5955",
+        "sha1": "533bdef7d861179a5393578901999fa56fdd3f39"
+    },
+    {
+        "version": "3.5.0",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.5.0/binaries/apache-maven-3.5.0-bin.tar.gz",
+        "md5": "35c39251d2af99b6624d40d801f6ff02",
+        "sha1": "878b8b93a8f9685aefba5c21a17b46eb141b1122"
+    },
+    {
+        "version": "3.5.0",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.5.0/binaries/apache-maven-3.5.0-bin.zip",
+        "md5": "c062cb57ca81615cc16500af332b93bd",
+        "sha1": "886393e7031d42c412a077c240af73d75e671d62"
+    },
+    {
+        "version": "3.5.2",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.5.2/binaries/apache-maven-3.5.2-bin.tar.gz",
+        "md5": "948110de4aab290033c23bf4894f7d9a",
+        "sha1": "190dcebb8a080f983af4420cac4f3ece7a47dd64"
+    },
+    {
+        "version": "3.5.2",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.5.2/binaries/apache-maven-3.5.2-bin.zip",
+        "md5": "b8d8d49d8178734124c4ff6f3a409d3d",
+        "sha1": "23adadc90b7f79ad84bd14574581d0145611bfda"
+    },
+    {
+        "version": "3.5.3",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.5.3/binaries/apache-maven-3.5.3-bin.tar.gz",
+        "md5": "51025855d5a7456fc1a67666fbef29de",
+        "sha1": "bbfa43a4ce4ef96732b896d057f8a613aa229801",
+        "sha512": "5b36a2289606cfaf9177991f889993742a485a48b9fb7ca43b67fbbe1a978a258fc971e0dce3b63d51d235abdf49f771c99900b2e77ee2a793825913ea32971b"
+    },
+    {
+        "version": "3.5.3",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.5.3/binaries/apache-maven-3.5.3-bin.tar.gz.sha256"
+    },
+    {
+        "version": "3.5.3",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.5.3/binaries/apache-maven-3.5.3-bin.zip",
+        "md5": "b4275b0216a6a2f8d8e5d0d911a502c2",
+        "sha1": "4a4844990333e2548540729ce9ab57f52a63148d",
+        "sha512": "ac1d16259de3db8850abf943e0131ebe975ced698e4463bcb4edda99690fa27ee880636984ab45e1b90334bea1ca5890f1f7d8f826d7bfc9df1e7c1d4eb359e4"
+    },
+    {
+        "version": "3.5.3",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.5.3/binaries/apache-maven-3.5.3-bin.zip.sha256"
+    },
+    {
+        "version": "3.5.4",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz",
+        "md5": "89eea39183139e5f8a0c1601d495b3b6",
+        "sha1": "22cac91b3557586bb1eba326f2f7727543ff15e3",
+        "sha512": "2a803f578f341e164f6753e410413d16ab60fabe31dc491d1fe35c984a5cce696bc71f57757d4538fe7738be04065a216f3ebad4ef7e0ce1bb4c51bc36d6be86"
+    },
+    {
+        "version": "3.5.4",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz.sha256"
+    },
+    {
+        "version": "3.5.4",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.zip",
+        "md5": "235db716537989e9e949e5bf23f965c0",
+        "sha1": "8a0d9cc9d4da3fac195de8e1e99fe07158d54192",
+        "sha512": "4d2763e1b73dfcde5c955f586bd754443833f63e20dd9ce4ce4405a2010bfc48324aa3b6bd5b6ac71a614112734b0bc652aa2ac05f492ed28a66de8116c3ef6e"
+    },
+    {
+        "version": "3.5.4",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.zip.sha256"
+    },
+    {
+        "version": "3.6.0",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz",
+        "sha512": "fae9c12b570c3ba18116a4e26ea524b29f7279c17cbaadc3326ca72927368924d9131d11b9e851b8dc9162228b6fdea955446be41207a5cfc61283dd8a561d2f"
+    },
+    {
+        "version": "3.6.0",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.zip",
+        "sha512": "7d14ab2b713880538974aa361b987231473fbbed20e83586d542c691ace1139026f232bd46fdcce5e8887f528ab1c3fbfc1b2adec90518b6941235952d3868e9"
+    },
+    {
+        "version": "3.6.1",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.6.1/binaries/apache-maven-3.6.1-bin.tar.gz",
+        "sha512": "b4880fb7a3d81edd190a029440cdf17f308621af68475a4fe976296e71ff4a4b546dd6d8a58aaafba334d309cc11e638c52808a4b0e818fc0fd544226d952544"
+    },
+    {
+        "version": "3.6.1",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.6.1/binaries/apache-maven-3.6.1-bin.zip",
+        "sha512": "51169366d7269ed316bad013d9cbfebe3a4ef1fda393ac4982d6dbc9af2d5cc359ee12838b8041cb998f236486e988b9c05372f4fdb29a96c1139f63c991e90e"
+    },
+    {
+        "version": "3.6.2",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.6.2/binaries/apache-maven-3.6.2-bin.tar.gz",
+        "sha512": "d941423d115cd021514bfd06c453658b1b3e39e6240969caf4315ab7119a77299713f14b620fb2571a264f8dff2473d8af3cb47b05acf0036fc2553199a5c1ee"
+    },
+    {
+        "version": "3.6.2",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.6.2/binaries/apache-maven-3.6.2-bin.zip",
+        "sha512": "4bb0e0bb1fb74f1b990ba9a6493cc6345873d9188fc7613df16ab0d5bd2017de5a3917af4502792f0bad1fcc95785dcc6660f7add53548e0ec4bfb30ce4b1da7"
+    },
+    {
+        "version": "3.6.3",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz",
+        "sha512": "c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0"
+    },
+    {
+        "version": "3.6.3",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.zip",
+        "sha512": "1c095ed556eda06c6d82fdf52200bc4f3437a1bab42387e801d6f4c56e833fb82b16e8bf0aab95c9708de7bfb55ec27f653a7cf0f491acebc541af234eded94d"
+    },
+    {
+        "version": "3.8.1",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.8.1/binaries/apache-maven-3.8.1-bin.tar.gz",
+        "sha512": "0ec48eb515d93f8515d4abe465570dfded6fa13a3ceb9aab8031428442d9912ec20f066b2afbf56964ffe1ceb56f80321b50db73cf77a0e2445ad0211fb8e38d"
+    },
+    {
+        "version": "3.8.1",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.8.1/binaries/apache-maven-3.8.1-bin.zip",
+        "sha512": "c585847bfbcf8647aeabfd3e8bf0ac3f67a037bd345545e274766f144c2b978b3457cbc3e31545e62c21ad69e732695de01ec96ea2580e5da67bd85df095c0f4"
+    },
+    {
+        "version": "3.8.2",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.8.2/binaries/apache-maven-3.8.2-bin.tar.gz",
+        "sha512": "b0bf39460348b2d8eae1c861ced6c3e8a077b6e761fb3d4669be5de09490521a74db294cf031b0775b2dfcd57bd82246e42ce10904063ef8e3806222e686f222"
+    },
+    {
+        "version": "3.8.2",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.8.2/binaries/apache-maven-3.8.2-bin.zip",
+        "sha512": "59ad2cbd6b7abde34ebedda94ce5631256373718e71b55202035bd1190d0144f071433f78b99e16f1204413b3eb888659e5039009e1ad0106f16332e3c62bced"
+    },
+    {
+        "version": "3.8.3",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.8.3/binaries/apache-maven-3.8.3-bin.tar.gz",
+        "sha512": "1c12a5df43421795054874fd54bb8b37d242949133b5bf6052a063a13a93f13a20e6e9dae2b3d85b9c7034ec977bbc2b6e7f66832182b9c863711d78bfe60faa"
+    },
+    {
+        "version": "3.8.3",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.8.3/binaries/apache-maven-3.8.3-bin.zip",
+        "sha512": "959de0db3e342ecf1c183b321799a836c3c10738126f3302b623376efa45c6769ccb5cd32a17f9a9a8eb64bb30f13a6a0e4170bf03a7707cfba6d41392107e93"
+    },
+    {
+        "version": "3.8.4",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.8.4/binaries/apache-maven-3.8.4-bin.tar.gz",
+        "sha512": "a9b2d825eacf2e771ed5d6b0e01398589ac1bfa4171f36154d1b5787879605507802f699da6f7cfc80732a5282fd31b28e4cd6052338cbef0fa1358b48a5e3c8"
+    },
+    {
+        "version": "3.8.4",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.8.4/binaries/apache-maven-3.8.4-bin.zip",
+        "sha512": "bcd1e99548ac8a5b9ec159ee16c23d29d6799696c92140d583d25eb323433aadcc0b47c45b0b6bd9dbcf344bbba38b56dd056a9c49ae714cfc22dc06bb4a4230"
+    }
+]
