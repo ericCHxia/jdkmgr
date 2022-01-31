@@ -29,12 +29,16 @@ def create_link(src: str, dst: str) -> None:
     os.symlink(src, dst)
 
 
-def download(url: str, dst: str, md5=None, sha1=None, sha512=None) -> None:
+def download(url: str, dst: str, md5=None, sha1=None, sha256=None, sha512=None) -> None:
     """
-    Download a file from a url and check the md5, sha1 or sha512 hashes if provided.
+    Download a file from a url and check the md5, sha1, sha256 and sha512 hashes if provided.
     If the file already exists and the hashes match, it will not download it again.
     If multiple hashes are provided, only one of them must match.
-    The prority of the hashes is: sha512, sha1, md5.
+    The prority of the hashes is: md5, sha1, sha256, sha512.
+    The prority is the same as the order of the arguments.
+    If the prorty is lower than the provided hash, it will not be checked.
+    The lowest priority is md5.
+    The highest priority is sha512.
     @param url: URL to download the file from
     @param dst: Destination to download the file to
     @param md5: MD5 hash to check against
@@ -50,10 +54,10 @@ def download(url: str, dst: str, md5=None, sha1=None, sha512=None) -> None:
     block_size = 1024
     progress_bar = tqdm(total=total_size_in_bytes, unit='B', unit_scale=True)
 
-    have_hash = md5 is not None or sha1 is not None or sha512 is not None
+    have_hash = md5 is not None or sha1 is not None or sha256 is not None or sha512 is not None
     if have_hash:
-        hash_mod = "sha512" if sha512 else "sha1" if sha1 else "md5"
-        hash_value = sha512 if sha512 else sha1 if sha1 else md5
+        hash_mod = "sha512" if sha512 is not None else "sha256" if sha256 is not None else "sha1" if sha1 is not None else "md5" if md5 is not None else None
+        hash_value = sha512 if sha512 is not None else sha256 if sha256 is not None else sha1 if sha1 is not None else md5 if md5 is not None else None
         hash_func: hashlib.HASH = getattr(hashlib, hash_mod)()
 
     with open(dst, 'wb') as file:
