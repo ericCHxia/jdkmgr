@@ -157,3 +157,4 @@ install/
 jdk/
 artifact/
 *.zip
+config.json
