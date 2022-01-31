@@ -5,7 +5,6 @@ import subprocess
 import re
 import sys
 import shutil
-import zipfile
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
@@ -139,30 +138,28 @@ def build_package(args):
     if os.system("nuitka src/jdkmgr.py --mingw64 --standalone --output-dir=dist") != 0:
         print("nuitka build failed")
         exit(1)
-    
-    artifact_filename = "jdkmgr-{}-{}-{}".format(version,
-                                    platform.system(), platform.architecture()[0])
-    os.makedirs("artifact",exist_ok=True)
 
-    os.rename("dist/jdkmgr.dist","dist/bin")
+    artifact_filename = "jdkmgr-{}-{}-{}".format(version,
+                                                 platform.system(), platform.architecture()[0])
+    os.makedirs("artifact", exist_ok=True)
+
+    os.rename("dist/jdkmgr.dist", "dist/bin")
     shutil.rmtree("dist/jdkmgr.build")
-    shutil.copytree("source","dist/source")
-    shutil.copy("LICENSE","dist/LICENSE")
+    shutil.copytree("source", "dist/source")
+    shutil.copy("LICENSE", "dist/LICENSE")
 
     if platform.system() == "Windows":
-        z = zipfile.ZipFile(os.path.join("artifact",artifact_filename+".zip"), "w")
-        for dirpath, dirnames, filenames in os.walk("dist"):
-            for filename in filenames:
-                z.write(os.path.join(dirpath, filename))
-        z.close()
+        if os.system("7z a -tzip -mx=9 artifact/{}.zip ./dist/*".format(artifact_filename)) != 0:
+            print("7z failed")
+            exit(1)
     else:
         if os.system("tar -czf artifact/{}.tar.gz dist".format(artifact_filename)) != 0:
             print("tar build failed")
             exit(1)
 
     if args.pack:
-        p = subprocess.Popen([r'C:\Program Files (x86)\NSIS\makensis.exe', "/INPUTCHARSET", "UTF8",f"/DVERSION={version}", 'nsis/build.nsi'],
-                     stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        p = subprocess.Popen([r'C:\Program Files (x86)\NSIS\makensis.exe', "/INPUTCHARSET", "UTF8", f"/DVERSION={version}", 'nsis/build.nsi'],
+                             stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         out, err = p.communicate()
         if p.returncode != 0:
             print("makensis build failed")
@@ -171,19 +168,34 @@ def build_package(args):
         shutil.move("nsis/Stetup.exe", "artifact/"+artifact_filename+".exe")
         print("build package {}.exe".format(artifact_filename))
 
+
+def clean(args):
+    """
+    Clean build files
+    @param args: args from argparse module (see main)
+    """
+    if os.path.exists("dist"):
+        shutil.rmtree("dist")
+    print("clean build files")
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Build script')
     parser.add_argument('--check', action='store_true',
                         help='Check if all dependencies are installed')
-    parser.add_argument('--version','-v', type=str, required=False,
+    parser.add_argument('--version', '-v', type=str, required=False,
                         help='Version of the application')
     parser.add_argument('--pack', action='store_true',
                         help='Pack the application (Windows Only)')
     parser.add_argument('--makensis', required=False,
                         help='Path to makensis (Windows Only)')
+    parser.add_argument('--clean', action='store_true',
+                        help='Clean build files')
     args = parser.parse_args()
     if args.check:
         check_package(args)
+    elif args.clean:
+        clean(args)
     else:
         check_package(args)
         build_package(args)
