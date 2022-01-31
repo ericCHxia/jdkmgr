@@ -25,6 +25,7 @@ def is_admin() -> bool:
 
 def create_link(src: str, dst: str) -> None:
     """Create a soft dir link
+    
     In windows, it needs admin rights to create a soft link.
     
     Example:
@@ -46,6 +47,7 @@ def create_link(src: str, dst: str) -> None:
 
 def download(url: str, dst: str, md5=None, sha1=None, sha256=None, sha512=None) -> None:
     """Download a file from a url and check the md5, sha1, sha256 and sha512 hashes if provided.
+
     If the file already exists and the hashes match, it will not download it again.
     If multiple hashes are provided, only one of them must match.
     The prority of the hashes is: md5, sha1, sha256, sha512.
@@ -96,6 +98,7 @@ def download(url: str, dst: str, md5=None, sha1=None, sha256=None, sha512=None) 
 
 def extract_zip(src: str, dst: str, rename: str = None) -> None:
     """Extracts a zip file to the specified location.
+
     If rename is provided, it will rename the extracted directory to the specified name.
 
     Example:
@@ -120,6 +123,7 @@ def extract_zip(src: str, dst: str, rename: str = None) -> None:
 
 def extract_targz(src: str, dst: str, rename: str = None) -> None:
     """Extracts a tar.gz file to the specified location.
+
     If rename is provided, it will rename the extracted directory to the specified name.
     
     Example:
