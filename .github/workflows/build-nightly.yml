@@ -31,9 +31,9 @@ jobs:
 
       - name: Build
         run: |
-          $env:PATH="C:\msys64\mingw64\bin;"+$env:PATH
           Get-Command g++
           Get-Command gcc
+          Get-Command python
           python build.py --pack
           
       - name: Upload a Build Artifact
