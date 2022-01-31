@@ -31,9 +31,15 @@ def create_link(src: str, dst: str) -> None:
 
 def download(url: str, dst: str, md5=None, sha1=None, sha512=None) -> None:
     """
-    Downloads a file from a URL With Progressbar and saves it to the specified location.
-    @param url: URL to download from
-    @param dst: Destination to save the file to
+    Download a file from a url and check the md5, sha1 or sha512 hashes if provided.
+    If the file already exists and the hashes match, it will not download it again.
+    If multiple hashes are provided, only one of them must match.
+    The prority of the hashes is: sha512, sha1, md5.
+    @param url: URL to download the file from
+    @param dst: Destination to download the file to
+    @param md5: MD5 hash to check against
+    @param sha1: SHA1 hash to check against
+    @param sha512: SHA512 hash to check against
     """
     os.makedirs(os.path.split(dst)[0], exist_ok=True)
     response = requests.get(url, stream=True)
