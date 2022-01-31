@@ -4,6 +4,7 @@ import os
 import platform
 from tqdm import tqdm
 import zipfile
+import hashlib
 
 def is_admin() -> bool:
     """
@@ -28,7 +29,7 @@ def create_link(src: str, dst: str) -> None:
     os.symlink(src, dst)
 
 
-def download(url: str, dst: str) -> None:
+def download(url: str, dst: str, md5=None, sha1=None, sha512=None) -> None:
     """
     Downloads a file from a URL With Progressbar and saves it to the specified location.
     @param url: URL to download from
@@ -42,13 +43,21 @@ def download(url: str, dst: str) -> None:
         return
     block_size = 1024
     progress_bar = tqdm(total=total_size_in_bytes, unit='B', unit_scale=True)
+
+    have_hash = md5 is not None or sha1 is not None or sha512 is not None
+    if have_hash:
+        hash_mod = "sha512" if sha512 else "sha1" if sha1 else "md5"
+        hash_value = sha512 if sha512 else sha1 if sha1 else md5
+        hash_func: hashlib.HASH = getattr(hashlib, hash_mod)()
+
     with open(dst, 'wb') as file:
         for data in response.iter_content(block_size):
             progress_bar.update(len(data))
             file.write(data)
+            hash_func.update(data)
     progress_bar.close()
-    if total_size_in_bytes != 0 and progress_bar.n != total_size_in_bytes:
-        print("ERROR, something went wrong")
+    if total_size_in_bytes != 0 and progress_bar.n != total_size_in_bytes and (not have_hash or hash_func.hexdigest() != hash_value):
+        raise Exception(f"Download of {url} failed")
 
 
 def extract_zip(src: str, dst: str, rename: str) -> None:
