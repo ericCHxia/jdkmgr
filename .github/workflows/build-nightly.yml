@@ -21,6 +21,7 @@ jobs:
       - name: Setup Dependency Walker
         run: |
           curl -L https://dependencywalker.com/depends22_x64.zip -o depends22_x64.zip && 
+          New-Item -ItemType Directory -Force -Path "$HOME\AppData\Local\Nuitka\Nuitka\depends\x86_64" &&
           unzip depends22_x64.zip -d $HOME\AppData\Local\Nuitka\Nuitka\depends\x86_64
       
       - name: Set up MinGW
