@@ -27,6 +27,7 @@ def get_NSIS_dir(args):
                 'NSIS not found. Please install NSIS or specify its path with --makensis')
             sys.exit(1)
 
+
 def check_EnVar_plugin(args):
     """
     Check if EnVar plugin is installed
@@ -36,6 +37,7 @@ def check_EnVar_plugin(args):
     if not os.path.exists(os.path.join(nsis_dir, 'Contrib', 'EnVar')):
         print('EnVar plugin not found. Please install EnVar plugin(https://github.com/GsNSIS/EnVar/).')
         sys.exit(1)
+
 
 def is_git_repo(path):
     """
@@ -129,6 +131,16 @@ def check_package(args):
             if os.system(r"curl -L https://dependencywalker.com/depends22_x64.zip -o depends22_x64.zip && unzip depends22_x64.zip -d {}".format(os.path.dirname(depends_path))) != 0:
                 print("Download Dependency Walker for Nuitka failed")
                 exit(1)
+            print("Download Dependency Walker for Nuitka success")
+
+        try:
+            p = subprocess.Popen(['7z'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            out, err = p.communicate()
+            version = re.findall(r'(\d+\.\d+)', out.decode('utf-8'))[0]
+            print("find 7z version: {}".format(version))
+        except:
+            print("7z module is not installed")
+            exit(1)
 
     if args.pack:
         if not platform.platform().startswith("Windows"):
