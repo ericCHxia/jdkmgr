@@ -9,6 +9,34 @@ import shutil
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 
+def get_NSIS_dir(args):
+    """
+    Get NSIS dir
+    @param args: args from argparse module (see main)
+    @return: NSIS dir
+    """
+    if args.makensis:
+        return args.makensis
+    else:
+        p = subprocess.Popen(['where', 'makensis'], stdout=subprocess.PIPE)
+        nsis_dir = p.communicate()[0].decode('utf-8').strip()
+        if nsis_dir:
+            return os.path.dirname(nsis_dir)
+        else:
+            print(
+                'NSIS not found. Please install NSIS or specify its path with --makensis')
+            sys.exit(1)
+
+def check_EnVar_plugin(args):
+    """
+    Check if EnVar plugin is installed
+    @param args: args from argparse module (see main)
+    """
+    nsis_dir = get_NSIS_dir(args)
+    if not os.path.exists(os.path.join(nsis_dir, 'Contrib', 'EnVar')):
+        print('EnVar plugin not found. Please install EnVar plugin(https://github.com/GsNSIS/EnVar/).')
+        sys.exit(1)
+
 def is_git_repo(path):
     """
     Check if path is git repo
@@ -90,7 +118,8 @@ def check_package(args):
         exit(1)
 
     if platform.system() == "Windows":
-        depends_path = os.path.join(os.path.expanduser('~'), "AppData", "Local", "Nuitka", "Nuitka", "depends", "x86_64", "depends.exe")
+        depends_path = os.path.join(os.path.expanduser(
+            '~'), "AppData", "Local", "Nuitka", "Nuitka", "depends", "x86_64", "depends.exe")
         if os.path.exists(depends_path):
             print("find Dependency Walker for Nuitka")
         else:
@@ -126,6 +155,7 @@ def check_package(args):
             else:
                 print("find makensis version: {}".format(
                     out.decode("utf-8").strip()))
+            check_EnVar_plugin(args)
 
     print("All modules are installed")
 
