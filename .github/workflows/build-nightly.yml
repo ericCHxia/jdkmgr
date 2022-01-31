@@ -15,9 +15,15 @@ jobs:
       
       - name: Inall NSIS EnVar Plugin
         run: |
-          curl -L https://github.com/GsNSIS/EnVar/releases/download/v0.3.1/EnVar-Plugin.zip -O EnVar-Plugin.zip
+          curl -L https://github.com/GsNSIS/EnVar/releases/download/v0.3.1/EnVar-Plugin.zip -o EnVar-Plugin.zip &&
           unzip EnVar-Plugin.zip -d "C:\Program Files (x86)\NSIS"
 
+      - name: Setup Dependency Walker
+        run: |
+          curl -L https://dependencywalker.com/depends22_x64.zip -o depends22_x64.zip && 
+          unzip depends22_x64.zip -d $HOME\depends22_x64 &&
+          echo "$HOME\depends22_x64" >> $GITHUB_PATH
+      
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
