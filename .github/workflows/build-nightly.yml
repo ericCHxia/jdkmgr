@@ -13,10 +13,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
-      - name: Setup MSYS2
+      - name: Inall NSIS EnVar Plugin
         run: |
-          $env:PATH="C:\msys64\mingw64\bin;C:\msys64\usr\bin;"+$env:PATH
-          yes|pacman -Syu
+          curl -L https://github.com/GsNSIS/EnVar/releases/download/v0.3.1/EnVar-Plugin.zip -O EnVar-Plugin.zip
+          unzip EnVar-Plugin.zip -d "C:\Program Files (x86)\NSIS"
 
       - name: Setup Python
         uses: actions/setup-python@v2
@@ -31,9 +31,9 @@ jobs:
 
       - name: Build
         run: |
-          $env:PATH="C:\msys64\mingw64\bin;C:\msys64\usr\bin;"+$env:PATH
           Get-Command g++
           Get-Command gcc
+          Get-Command python
           python build.py --pack
           
       - name: Upload a Build Artifact
