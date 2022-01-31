@@ -21,8 +21,7 @@ jobs:
       - name: Setup Dependency Walker
         run: |
           curl -L https://dependencywalker.com/depends22_x64.zip -o depends22_x64.zip && 
-          unzip depends22_x64.zip -d $HOME\depends22_x64 &&
-          echo "$HOME\depends22_x64" >> $GITHUB_PATH
+          unzip depends22_x64.zip -d C:\Users\eric\AppData\Local\Nuitka\Nuitka\depends\x86_64
       
       - name: Set up MinGW
         uses: ericCHxia/setup-mingw@v3
@@ -50,3 +49,4 @@ jobs:
         with:
           name: jdkmgr_${{github.ref_name}}_windows_amd64.zip
           path: artifact
+          retention-days: 7
