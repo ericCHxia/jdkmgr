@@ -586,44 +586,32 @@
         "url": "https://archive.apache.org/dist/maven/maven-3/3.5.3/binaries/apache-maven-3.5.3-bin.tar.gz",
         "md5": "51025855d5a7456fc1a67666fbef29de",
         "sha1": "bbfa43a4ce4ef96732b896d057f8a613aa229801",
+        "sha256": "b52956373fab1dd4277926507ab189fb797b3bc51a2a267a193c931fffad8408",
         "sha512": "5b36a2289606cfaf9177991f889993742a485a48b9fb7ca43b67fbbe1a978a258fc971e0dce3b63d51d235abdf49f771c99900b2e77ee2a793825913ea32971b"
-    },
-    {
-        "version": "3.5.3",
-        "url": "https://archive.apache.org/dist/maven/maven-3/3.5.3/binaries/apache-maven-3.5.3-bin.tar.gz.sha256"
     },
     {
         "version": "3.5.3",
         "url": "https://archive.apache.org/dist/maven/maven-3/3.5.3/binaries/apache-maven-3.5.3-bin.zip",
         "md5": "b4275b0216a6a2f8d8e5d0d911a502c2",
         "sha1": "4a4844990333e2548540729ce9ab57f52a63148d",
+        "sha256": "044665b799396cf7ee9442a9dd7d9ac6255ba91f7377248a52a6ec031ca7f8de",
         "sha512": "ac1d16259de3db8850abf943e0131ebe975ced698e4463bcb4edda99690fa27ee880636984ab45e1b90334bea1ca5890f1f7d8f826d7bfc9df1e7c1d4eb359e4"
-    },
-    {
-        "version": "3.5.3",
-        "url": "https://archive.apache.org/dist/maven/maven-3/3.5.3/binaries/apache-maven-3.5.3-bin.zip.sha256"
     },
     {
         "version": "3.5.4",
         "url": "https://archive.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz",
         "md5": "89eea39183139e5f8a0c1601d495b3b6",
         "sha1": "22cac91b3557586bb1eba326f2f7727543ff15e3",
+        "sha256": "ce50b1c91364cb77efe3776f756a6d92b76d9038b0a0782f7d53acf1e997a14d",
         "sha512": "2a803f578f341e164f6753e410413d16ab60fabe31dc491d1fe35c984a5cce696bc71f57757d4538fe7738be04065a216f3ebad4ef7e0ce1bb4c51bc36d6be86"
-    },
-    {
-        "version": "3.5.4",
-        "url": "https://archive.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz.sha256"
     },
     {
         "version": "3.5.4",
         "url": "https://archive.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.zip",
         "md5": "235db716537989e9e949e5bf23f965c0",
         "sha1": "8a0d9cc9d4da3fac195de8e1e99fe07158d54192",
+        "sha256": "6aaa1bee0be0e3a64b3303df0afb36e4bb69922fe46d43b32615796d671a4275",
         "sha512": "4d2763e1b73dfcde5c955f586bd754443833f63e20dd9ce4ce4405a2010bfc48324aa3b6bd5b6ac71a614112734b0bc652aa2ac05f492ed28a66de8116c3ef6e"
-    },
-    {
-        "version": "3.5.4",
-        "url": "https://archive.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.zip.sha256"
     },
     {
         "version": "3.6.0",
