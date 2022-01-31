@@ -9,9 +9,13 @@ import tarfile
 
 
 def is_admin() -> bool:
-    """
-    Check if the user is admin
-    @return: True or False
+    """Check if the user is admin
+    
+    Example:
+    >>> is_admin()
+
+    Returns:
+        bool: True if the user is admin, False otherwise.
     """
     try:
         return os.getuid() == 0
@@ -20,10 +24,19 @@ def is_admin() -> bool:
 
 
 def create_link(src: str, dst: str) -> None:
-    """
-    Create a soft dir link
-    @param src: source dir
-    @param dst: target dir
+    """Create a soft dir link
+    In windows, it needs admin rights to create a soft link.
+    
+    Example:
+    >>> create_link("/path/to/file", "/path/to/link")           # Linux
+    >>> create_link("C:\\path\\to\\file", "C:\\path\\to\\link") # Windows
+
+    Args:
+        src (str): Source file
+        dst (str): Destination file
+
+    Raises:
+        Exception: If the link already exists
     """
     if os.path.exists(dst):
         os.unlink(dst)
@@ -32,8 +45,7 @@ def create_link(src: str, dst: str) -> None:
 
 
 def download(url: str, dst: str, md5=None, sha1=None, sha256=None, sha512=None) -> None:
-    """
-    Download a file from a url and check the md5, sha1, sha256 and sha512 hashes if provided.
+    """Download a file from a url and check the md5, sha1, sha256 and sha512 hashes if provided.
     If the file already exists and the hashes match, it will not download it again.
     If multiple hashes are provided, only one of them must match.
     The prority of the hashes is: md5, sha1, sha256, sha512.
@@ -41,12 +53,21 @@ def download(url: str, dst: str, md5=None, sha1=None, sha256=None, sha512=None) 
     If the prorty is lower than the provided hash, it will not be checked.
     The lowest priority is md5.
     The highest priority is sha512.
-    @param url: URL to download the file from
-    @param dst: Destination to download the file to
-    @param md5: MD5 hash to check against
-    @param sha1: SHA1 hash to check against
-    @param sha256: SHA256 hash to check against
-    @param sha512: SHA512 hash to check against
+    
+    Example:
+    >>> download("https://example.com/file.zip", "file.zip", md5="d577273ff885c3f84dadb8578bb41399")
+    >>> download("https://example.com/file.zip", "file.zip")
+
+    Args:
+        url (str): The url to download the file from.
+        dst (str): The destination to download the file to.
+        md5 (str, optional): The md5 hash of the file.
+        sha1 (str, optional): The sha1 hash of the file.
+        sha256 (str, optional): The sha256 hash of the file.
+        sha512 (str, optional): The sha512 hash of the file.
+
+    Raises:
+        Exception: If the file already exists and the hashes don't match.
     """
     os.makedirs(os.path.split(dst)[0], exist_ok=True)
     response = requests.get(url, stream=True)
@@ -74,12 +95,20 @@ def download(url: str, dst: str, md5=None, sha1=None, sha256=None, sha512=None) 
 
 
 def extract_zip(src: str, dst: str, rename: str = None) -> None:
-    """
-    Extracts a zip file to the specified location.
+    """Extracts a zip file to the specified location.
     If rename is provided, it will rename the extracted directory to the specified name.
-    @param src: Source zip file
-    @param dst: Destination to extract the zip file to
-    @param rename: Rename the extracted dir to this name
+
+    Example:
+    >>> extract_zip("file.zip", "path/to/extract/to")
+    >>> extract_zip("file.zip", "path/to/extract/to", "new_name")
+
+    Args:
+        src (str): Source zip file
+        dst (str): Destination to extract the zip file to
+        rename (str, optional): Rename the extracted directory to this name
+    
+    Raises:
+        Exception: If the new directory already exists when rename is provided or if the zip file is corrupted
     """
     os.makedirs(dst, exist_ok=True)
     with zipfile.ZipFile(src, 'r') as zip_ref:
@@ -90,11 +119,20 @@ def extract_zip(src: str, dst: str, rename: str = None) -> None:
 
 
 def extract_targz(src: str, dst: str, rename: str = None) -> None:
-    """
-    Extracts a tar.gz file to the specified location.
+    """Extracts a tar.gz file to the specified location.
     If rename is provided, it will rename the extracted directory to the specified name.
-    @param src: Source tar.gz file
-    @param dst: Destination to extract the tar.gz file to
+    
+    Example:
+    >>> extract_targz("file.tar.gz", "path/to/extract/to")
+    >>> extract_targz("file.tar.gz", "path/to/extract/to", "new_name")
+
+    Args:
+        src (str): Source tar.gz file
+        dst (str): Destination to extract the tar.gz file to
+        rename (str, optional): Rename the extracted directory to this name
+    
+    Raises:
+        Exception: If the new directory already exists when rename is provided or if the tar.gz file is corrupted
     """
     os.makedirs(dst, exist_ok=True)
     with tarfile.open(src, 'r:gz') as tar_ref:
@@ -105,9 +143,16 @@ def extract_targz(src: str, dst: str, rename: str = None) -> None:
 
 
 def get_avaliable_arches():
-    """
-    Get the avaliable arches
-    @return: Set of avaliable arches
+    """Get the avaliable arches
+    
+    Example:
+    >>> get_avaliable_arches()
+
+    Returns:
+        set: The avaliable arches
+    
+    Raises:
+        Exception: If the architecture is not supported
     """
     if platform.machine() == "i386":
         return {"x86", "i686", "i386", "i586", "i486"}
