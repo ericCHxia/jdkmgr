@@ -200,7 +200,8 @@ def build_package(args):
             exit(1)
 
     if args.pack:
-        p = subprocess.Popen([r'C:\Program Files (x86)\NSIS\makensis.exe', "/INPUTCHARSET", "UTF8", f"/DVERSION={version}", 'nsis/build.nsi'],
+        makensis = "makensis" if not args.makensis else args.makensis
+        p = subprocess.Popen([makensis, "/INPUTCHARSET", "UTF8", f"/DVERSION={version}", 'nsis/build.nsi'],
                              stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         out, err = p.communicate()
         if p.returncode != 0:
