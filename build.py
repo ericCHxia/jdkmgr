@@ -89,6 +89,18 @@ def check_package(args):
         print("git module is not installed")
         exit(1)
 
+    if platform.system() == "Windows":
+        depends_path = os.path.join(os.path.expanduser('~'), "AppData", "Local", "Nuitka", "Nuitka", "depends", "x86_64", "depends.exe")
+        if os.path.exists(depends_path):
+            print("find Dependency Walker for Nuitka")
+        else:
+            print("Dependency Walker for Nuitka is not installed")
+            print("Begin to download Dependency Walker for Nuitka")
+            os.makedirs(os.path.dirname(depends_path), exist_ok=True)
+            if os.system(r"curl -L https://dependencywalker.com/depends22_x64.zip -o depends22_x64.zip && unzip depends22_x64.zip -d {}".format(os.path.dirname(depends_path))) != 0:
+                print("Download Dependency Walker for Nuitka failed")
+                exit(1)
+
     if args.pack:
         if not platform.platform().startswith("Windows"):
             print("Only Windows is supported for packaging")
