@@ -5,6 +5,8 @@ import platform
 from tqdm import tqdm
 import zipfile
 import hashlib
+import tarfile
+
 
 def is_admin() -> bool:
     """
@@ -43,6 +45,7 @@ def download(url: str, dst: str, md5=None, sha1=None, sha256=None, sha512=None) 
     @param dst: Destination to download the file to
     @param md5: MD5 hash to check against
     @param sha1: SHA1 hash to check against
+    @param sha256: SHA256 hash to check against
     @param sha512: SHA512 hash to check against
     """
     os.makedirs(os.path.split(dst)[0], exist_ok=True)
@@ -70,9 +73,10 @@ def download(url: str, dst: str, md5=None, sha1=None, sha256=None, sha512=None) 
         raise Exception(f"Download of {url} failed")
 
 
-def extract_zip(src: str, dst: str, rename: str) -> None:
+def extract_zip(src: str, dst: str, rename: str = None) -> None:
     """
-    Extracts a zip file to the specified location and rename the dir.
+    Extracts a zip file to the specified location.
+    If rename is provided, it will rename the extracted directory to the specified name.
     @param src: Source zip file
     @param dst: Destination to extract the zip file to
     @param rename: Rename the extracted dir to this name
@@ -81,7 +85,23 @@ def extract_zip(src: str, dst: str, rename: str) -> None:
     with zipfile.ZipFile(src, 'r') as zip_ref:
         zip_ref.extractall(dst)
         dirname = zip_ref.namelist()[0]
-    os.rename(os.path.join(dst, dirname[:-1]), os.path.join(dst, rename))
+    if rename is not None:
+        os.rename(os.path.join(dst, dirname[:-1]), os.path.join(dst, rename))
+
+
+def extract_targz(src: str, dst: str, rename: str = None) -> None:
+    """
+    Extracts a tar.gz file to the specified location.
+    If rename is provided, it will rename the extracted directory to the specified name.
+    @param src: Source tar.gz file
+    @param dst: Destination to extract the tar.gz file to
+    """
+    os.makedirs(dst, exist_ok=True)
+    with tarfile.open(src, 'r:gz') as tar_ref:
+        tar_ref.extractall(dst)
+        dirname = tar_ref.getnames()[0]
+    if rename is not None:
+        os.rename(os.path.join(dst, dirname[:-1]), os.path.join(dst, rename))
 
 
 def get_avaliable_arches():
