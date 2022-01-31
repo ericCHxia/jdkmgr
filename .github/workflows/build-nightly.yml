@@ -24,6 +24,9 @@ jobs:
           unzip depends22_x64.zip -d $HOME\depends22_x64 &&
           echo "$HOME\depends22_x64" >> $GITHUB_PATH
       
+      - name: Set up MinGW
+        uses: ericCHxia/setup-mingw@v3
+      
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
