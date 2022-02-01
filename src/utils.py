@@ -90,7 +90,8 @@ def download(url: str, dst: str, md5=None, sha1=None, sha256=None, sha512=None) 
         for data in response.iter_content(block_size):
             progress_bar.update(len(data))
             file.write(data)
-            hash_func.update(data)
+            if have_hash:
+                hash_func.update(data)
     progress_bar.close()
     if total_size_in_bytes != 0 and progress_bar.n != total_size_in_bytes and (not have_hash or hash_func.hexdigest() != hash_value):
         raise Exception(f"Download of {url} failed")
