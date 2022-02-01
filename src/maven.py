@@ -2,14 +2,16 @@ import os
 import platform
 import json
 from utils import download, extract, create_link, get_avaliable_arches
+import argparse
 
 
 class MavenManager:
 
-    def __init__(self, maven_path=None) -> None:
+    def __init__(self, parsers: argparse.ArgumentParser, maven_path=None) -> None:
         """Initialize MavenManager with maven_path
 
         Args:
+            parsers (argparse.ArgumentParser): parser for MavenManager
             maven_path (str, optional): path to the maven.
 
         Raises:
@@ -20,6 +22,16 @@ class MavenManager:
             >>> maven = MavenManager("maven_3.6.3")
         """
         self.maven_path = maven_path
+        maven_parser_ls = parsers.add_parser('ls')
+        maven_parser_ls.set_defaults(func=self.list)
+
+        maven_parser_install = parsers.add_parser('install')
+        maven_parser_install.add_argument('name', help="Name of the Maven")
+        maven_parser_install.set_defaults(func=self.install)
+
+        maven_parser_use = parsers.add_parser('use')
+        maven_parser_use.add_argument('name', type=str, help="Maven hash or Maven dir name")
+        maven_parser_use.set_defaults(func=self.use)
 
         # load Maven sources
         if os.path.exists("source/maven.json"):

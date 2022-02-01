@@ -1,11 +1,13 @@
 import os
 import platform
 import json
+import argparse
 from utils import download, extract_zip, create_link, get_avaliable_arches
+
 
 class JDKManager:
     """JDK Manager
-    
+
     JDK Manager class for managing JDKs and JDK links in the system.
     It can install JDKs from the internet and use them.
     It can also list all installed JDKs and available JDKs.
@@ -29,16 +31,28 @@ class JDKManager:
         >>> jdk.list()
     """
 
-    def __init__(self, jdk_path=None) -> None:
+    def __init__(self, parsers: argparse.ArgumentParser, jdk_path=None) -> None:
         """Initialize JDK Manager with current JDK path
 
         Args:
+            parsers (argparse.ArgumentParser): The argument parser.
             jdk_path (str): The path of the current JDK.
 
         Raises:
             FileNotFoundError: If the source file of JDKs is not found.
         """
         self.jdk_path = jdk_path
+        parser_ls = parsers.add_parser('ls')
+        parser_ls.set_defaults(func=self.list)
+
+        parser_install = parsers.add_parser('install')
+        parser_install.add_argument('name', help="Name of the JDK")
+        parser_install.set_defaults(func=self.install)
+
+        parser_use = parsers.add_parser('use')
+        parser_use.add_argument(
+            'name', type=str, help="JDK hash or JDK dir name")
+        parser_use.set_defaults(func=self.use)
 
         # load JDK sources
         if os.path.exists("source/jdk.json"):
@@ -62,18 +76,18 @@ class JDKManager:
     @staticmethod
     def generate_name(jdk_source: dict) -> str:
         """Generate a name for the JDK
-        
+
         Args:
             jdk_source (dict): The source of the JDK.
-        
+
         Returns:
             str: The name of the JDK.
-        
+
         Examples:
             >>> jdk = JDKManager()
             >>> jdk.generate_name({"version": "17.0.0", "abbreviate": "AMZ", "arch": "x64", "os": "windows", "distribution": "Amazon"})
             'jdk_17.0.0_amz'
-        
+
         Raises:
             KeyError: If the source of the JDK is not complete.
         """
@@ -89,15 +103,15 @@ class JDKManager:
 
         Args:
             name (str): The name of the JDK.
-        
+
         Returns:
             bool: True if the JDK is installed successfully; False otherwise.
-        
+
         Examples:
             >>> jdk = JDKManager()
             >>> jdk.install("jdk_17.0.1_ms")
             True
-        
+
         Raises:
             KeyError: If the source of the JDK is not complete.
             DownloadError: If the JDK Link is unavailable.
@@ -135,10 +149,10 @@ class JDKManager:
 
         Args:
             jdk (str): The name of the JDK.
-        
+
         Returns:
             bool: True if the JDK is used successfully; False otherwise.
-        
+
         Examples:
             >>> jdk = JDKManager()
             >>> jdk.install("jdk_17.0.1_ms")
@@ -166,7 +180,7 @@ class JDKManager:
 
         It can list all installed JDKs and all available JDKs.
         The current JDK will be marked with `*`
-        
+
         Examples:
             >>> jdk = JDKManager()
             >>> jdk.install("jdk_17.0.1_ms")
