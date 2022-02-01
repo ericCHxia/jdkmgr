@@ -118,7 +118,7 @@ def extract_zip(src: str, dst: str, rename: str = None) -> None:
         zip_ref.extractall(dst)
         dirname = zip_ref.namelist()[0]
     if rename is not None:
-        os.rename(os.path.join(dst, dirname[:-1]), os.path.join(dst, rename))
+        os.rename(os.path.join(dst, os.path.dirname(dirname)), os.path.join(dst, rename))
 
 
 def extract_targz(src: str, dst: str, rename: str = None) -> None:
@@ -143,8 +143,38 @@ def extract_targz(src: str, dst: str, rename: str = None) -> None:
         tar_ref.extractall(dst)
         dirname = tar_ref.getnames()[0]
     if rename is not None:
-        os.rename(os.path.join(dst, dirname[:-1]), os.path.join(dst, rename))
+        os.rename(os.path.join(dst, os.path.dirname(dirname)), os.path.join(dst, rename))
 
+def extract(src: str, dst: str, rename: str = None) -> None:
+    """Extracts a file to the specified location.
+    
+    The supported file types are:
+    - zip
+    - tar.gz
+
+    If rename is provided, it will rename the extracted directory to the specified name.
+    
+    Example:
+    >>> extract("file.zip", "path/to/extract/to")
+    >>> extract("file.zip", "path/to/extract/to", "new_name")
+    >>> extract("file.tar.gz", "path/to/extract/to")
+    >>> extract("file.tar.gz", "path/to/extract/to", "new_name")
+
+    Args:
+        src (str): Source file
+        dst (str): Destination to extract the file to
+        rename (str, optional): Rename the extracted directory to this name
+    
+    Raises:
+        Exception: If the new directory already exists when rename is provided or if the file is corrupted
+    """
+    os.makedirs(dst, exist_ok=True)
+    if src.endswith(".zip"):
+        extract_zip(src, dst, rename)
+    elif src.endswith(".tar.gz"):
+        extract_targz(src, dst, rename)
+    else:
+        raise Exception(f"Extraction of {src} not supported")
 
 def get_avaliable_arches():
     """Get the avaliable arches
