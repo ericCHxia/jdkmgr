@@ -119,6 +119,7 @@ Function .onInit
   InitPluginsDir
   File /oname=$PLUGINSDIR\option.ini "${OPTION_INI}"
   WriteINIStr "$PLUGINSDIR\option.ini" "Field 1" "Text" $(JAVA_HOME_INFO)
+  WriteINIStr "$PLUGINSDIR\option.ini" "Field 2" "Text" $(MAVEN_HOME_INFO)
 
 FunctionEnd
 
@@ -141,16 +142,16 @@ FunctionEnd
 
 Function ValidateCustom
   ReadINIStr ${TEMP1} "$PLUGINSDIR\option.ini" "Field 1" "State"
-  StrCmp ${TEMP1} 1 add_java_path
+  StrCmp ${TEMP1} 0 add_java_path_done
+  EnVar::SetHKLM
+  EnVar::AddValue "JAVA_HOME" "$INSTDIR\jdk"
+  add_java_path_done:
 
-  add_java_path:
-    EnVar::SetHKLM
-
-    EnVar::AddValue "JAVA_HOME" "$INSTDIR\jdk"
-
-    Goto done
-
-  done:
+  ReadINIStr ${TEMP1} "$PLUGINSDIR\option.ini" "Field 2" "State"
+  StrCmp ${TEMP1} 0 add_maven_path_done
+  EnVar::SetHKLM
+  EnVar::AddValue "MAVEN_HOME" "$INSTDIR\maven"
+  add_maven_path_done:
 FunctionEnd
 
 ;--------------------------------
