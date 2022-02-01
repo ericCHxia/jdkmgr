@@ -159,3 +159,4 @@ maven/
 artifact/
 *.zip
 config.json
+maven
