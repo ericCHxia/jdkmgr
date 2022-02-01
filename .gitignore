@@ -155,6 +155,7 @@ cython_debug/
 cache/
 install/
 jdk/
+maven/
 artifact/
 *.zip
 config.json
