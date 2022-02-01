@@ -177,7 +177,7 @@ class MavenManager:
         print("Installed Maven:")
         for i in self.indstalled:
             print(f"  {i}",end="")
-            if self.indstalled[i]["version"] == self.maven_sources[0]["version"]:
+            if self.generate_name(self.indstalled[i]) == self.maven_path:
                 print(" *")
             else:
                 print()
