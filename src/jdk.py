@@ -54,6 +54,9 @@ class JDKManager:
             'name', type=str, help="JDK hash or JDK dir name")
         parser_use.set_defaults(func=self.use)
 
+        parser_check = parsers.add_parser('check')
+        parser_check.set_defaults(func=self.check)
+
         # load JDK sources
         if os.path.exists("source/jdk.json"):
             with open("source/jdk.json") as f:
@@ -201,3 +204,44 @@ class JDKManager:
             if platform.platform().__contains__(i["os"]) and i["arch"].lower() in get_avaliable_arches() and i["hash"] not in self.indstalled_hash:
                 print(
                     f"{self.generate_name(i):15s} - {i['version']}({i['distribution']})")
+
+    def check(self, **kargs):
+        """Check JDK
+
+        It can check the environment of the JDK is correct.
+
+        Returns:
+            bool: True if the JDK environment is correct; False otherwise.
+
+        Examples:
+            >>> jdk = JDKManager()
+            >>> jdk.install("jdk_17.0.1_ms")
+            True
+            >>> jdk.use("jdk_17.0.1_ms")
+            True
+            >>> jdk.check()
+            True
+        """
+        
+        java_home = os.path.realpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "../jdk"))
+        env_java_home = os.path.realpath(os.environ.get("JAVA_HOME"))
+        if not java_home == env_java_home:
+            print(f"JAVA_HOME is not set correctly.\nIt should be {java_home} instead of {os.environ['JAVA_HOME']}.\nPlease set JAVA_HOME to {java_home}")
+            return False
+        
+        PATH = os.environ.get("PATH")
+        if platform.system() == "Windows":
+            PATH = PATH.split(";")
+        else:
+            PATH = PATH.split(":")
+        PATH = [os.path.realpath(i) for i in PATH]
+        java_home_bin = os.path.realpath(os.path.join(java_home, "bin"))
+        if not java_home_bin in PATH:
+            print(f"PATH is not set correctly.")
+            if platform.system() == "Windows":
+                print("You should add %JAVA_HOME%\\bin to PATH.")
+            else:
+                print("You should add $JAVA_HOME/bin to PATH.")
+            return False
+        print("JDK environment is correct.")
+        return True
