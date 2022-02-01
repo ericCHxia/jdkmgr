@@ -156,6 +156,7 @@ class MavenManager:
             if os.path.exists("maven"):
                 os.remove("maven")
             os.symlink(os.path.join("install", name), "maven")
+            self.maven_path = name
             print(f"Maven {name} is used")
             return True
         else:
