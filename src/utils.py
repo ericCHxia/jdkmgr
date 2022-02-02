@@ -35,9 +35,6 @@ def create_link(src: str, dst: str) -> None:
     Args:
         src (str): Source file
         dst (str): Destination file
-
-    Raises:
-        Exception: If the link already exists
     """
     if os.path.exists(dst):
         os.unlink(dst)
