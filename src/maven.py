@@ -3,7 +3,7 @@ import platform
 import json
 from utils import download, extract, create_link, get_avaliable_arches
 import argparse
-
+import subprocess
 
 class MavenManager:
 
@@ -22,16 +22,19 @@ class MavenManager:
             >>> maven = MavenManager("maven_3.6.3")
         """
         self.maven_path = maven_path
-        maven_parser_ls = parsers.add_parser('ls')
+        maven_parser_ls = parsers.add_parser('ls', help='list all installed Maven and available Maven')
         maven_parser_ls.set_defaults(func=self.list)
 
-        maven_parser_install = parsers.add_parser('install')
+        maven_parser_install = parsers.add_parser('install', help="install Maven")
         maven_parser_install.add_argument('name', help="Name of the Maven")
         maven_parser_install.set_defaults(func=self.install)
 
-        maven_parser_use = parsers.add_parser('use')
+        maven_parser_use = parsers.add_parser('use', help="Select Maven")
         maven_parser_use.add_argument('name', type=str, help="Maven hash or Maven dir name")
         maven_parser_use.set_defaults(func=self.use)
+
+        maven_parser_check = parsers.add_parser('check', help="Check if Maven environment is set up correctly")
+        maven_parser_check.set_defaults(func=self.check)
 
         # load Maven sources
         if os.path.exists("source/maven.json"):
@@ -155,7 +158,7 @@ class MavenManager:
         if name in self.indstalled:
             if os.path.exists("maven"):
                 os.remove("maven")
-            os.symlink(os.path.join("install", name), "maven")
+            create_link(os.path.join("install", name), "maven")
             self.maven_path = name
             print(f"Maven {name} is used")
             return True
@@ -190,3 +193,47 @@ class MavenManager:
         for i in available_maven:
             print(f"  {i}")
 
+    def check(self, **kargs) -> None:
+        """check if Maven environment is set up correctly
+
+        Examples:
+        >>> maven = MavenManager()
+        >>> maven.check()
+        """
+
+        maven_home = os.path.realpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "../maven"))
+        env_maven_home = os.environ.get("MAVEN_HOME")
+        if env_maven_home is None:
+            print("MAVEN_HOME is not set")
+            return False
+        
+        PATH = os.environ.get("PATH")
+        if platform.system() == "Windows":
+            PATH = PATH.split(";")
+        else:
+            PATH = PATH.split(":")
+        
+        PATH = [os.path.realpath(i) for i in PATH]
+        maven_home_bin = os.path.realpath(os.path.join(maven_home, "bin"))
+        if maven_home_bin not in PATH:
+            print("PATH is not set correctly")
+            if platform.system() == "Windows":
+                print("Please add %MAVEN_HOME%\\bin to PATH")
+            else:
+                print("Please add $MAVEN_HOME/bin to PATH")
+            return False
+        
+        if platform.system() == "Windows":
+            p = subprocess.Popen(["cmd", "/c", "where", "mvn"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            out, err = p.communicate()
+            if p.returncode != 0:
+                print("Maven is not installed")
+                return False
+            if os.path.realpath(os.path.dirname(out.decode("utf-8").split("\r\n")[0])) != maven_home_bin:
+                print("Maven PATH is not set correctly")
+                print("There exists a Maven in PATH but not in $MAVEN_HOME/bin")
+                print("Please add $MAVEN_HOME/bin to PATH")
+                return False
+
+        print("Maven environment is set up correctly")
+        return True
