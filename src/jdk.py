@@ -144,14 +144,14 @@ class JDKManager:
         print(f"No such JDK: {name}")
         return False
 
-    def use(self, jdk: str, **kargs):
+    def use(self, name: str, **kargs):
         """Use JDK
 
         It can use a JDK by changing the `jdk` link.
         In windows, it needs administrator privileges.
 
         Args:
-            jdk (str): The name of the JDK.
+            name (str): The name of the JDK.
 
         Returns:
             bool: True if the JDK is used successfully; False otherwise.
@@ -167,7 +167,7 @@ class JDKManager:
             FileNotFoundError: If the JDK is not installed.
         """
         for i in self.indstalled:
-            if self.indstalled[i]["hash"].startswith(jdk) or i == jdk:
+            if self.indstalled[i]["hash"].startswith(name) or i == name:
                 if os.path.exists("jdk"):
                     os.remove("jdk")
                 self.jdk_path = os.path.join("install", i)
@@ -175,7 +175,7 @@ class JDKManager:
                 print(
                     f"JDK {self.indstalled[i]['version']}({self.indstalled[i]['distribution']}) is now used")
                 return True
-        print(f"No such JDK {jdk}")
+        print(f"No such JDK {name}")
         return False
 
     def list(self, **kargs):
